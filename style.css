@@ -1,0 +1,209 @@
+:root {
+  --col-primary-orange: hsl(35, 77%, 62%);
+  --col-primary-red: hsl(5, 85%, 63%);
+
+  --col-offwhite: hsl(36, 100%, 99%);
+  --col-greyblue: hsl(233, 8%, 79%);
+  --col-darkgrey: hsl(236, 13%, 42%);
+  --col-verydark: hsl(240, 100%, 5%);
+
+  --ff-primary: 'Inter', sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-800: 800;
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 15px;
+  display: grid;
+  place-content: center;
+  background-color: #f2f2f2;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  padding: 1rem 4rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  color: var(--col-darkgrey);
+  font-weight: var(--fw-400);
+}
+.nav-list li:hover {
+  color: var(--col-primary-red);
+  cursor: pointer;
+}
+
+.grid-temp {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  grid-template-areas:
+    'logo logo panel'
+    'title content panel';
+}
+
+.grid-logo {
+  grid-area: logo;
+}
+.grid-title {
+  grid-area: title;
+  font-size: 3.5rem;
+  line-height: 56px;
+  color: #00001a;
+  font-weight: 800;
+}
+.grid-content {
+  grid-area: content;
+}
+.grid-panel {
+  grid-area: panel;
+  padding: 1rem;
+  background: var(--col-verydark);
+  color: white;
+}
+.grid-panel h2 {
+  color: #e9aa52;
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 40px;
+}
+
+.panel-content {
+  border-bottom: 1px #5e607a solid;
+  padding: 2rem 0;
+  color: #c5c6ce;
+  font-weight: 400;
+}
+.panel-content h4 {
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #fffdfa;
+  margin-bottom: 1rem;
+}
+.panel-content h4:hover {
+  color: #e9aa52;
+  cursor: pointer;
+}
+
+.no-border {
+  border: none;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+  gap: 1rem;
+}
+
+.grid-content p {
+  color: #5e607a;
+  font-weight: 400;
+}
+
+button {
+  background-color: var(--col-primary-red);
+  color: white;
+  width: 11rem;
+  height: 3rem;
+  margin-top: 1rem;
+  border: none;
+  letter-spacing: 0.2rem;
+}
+button:hover {
+  background-color: #00001a;
+  cursor: pointer;
+}
+.num {
+  color: #c5c6ce;
+  font-weight: 700;
+  font-size: 32px;
+}
+.foot-title {
+  color: #00001a;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+.foot-title:hover {
+  color: var(--col-primary-red);
+  cursor: pointer;
+}
+.f-content {
+  color: #5e607a;
+  font-weight: 400;
+}
