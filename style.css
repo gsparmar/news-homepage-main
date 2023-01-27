@@ -127,6 +127,10 @@ select {
 
 .grid-logo {
   grid-area: logo;
+  height: auto;
+}
+.mobile-img {
+  display: none;
 }
 .grid-title {
   grid-area: title;
@@ -241,6 +245,13 @@ button:hover {
       'title'
       'content'
       'panel';
+  }
+
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: grid;
   }
 
   .grid-title {
