@@ -109,8 +109,9 @@ select {
 
 .grid-temp {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 3rem;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-areas:
     'logo logo panel'
     'title content panel';
