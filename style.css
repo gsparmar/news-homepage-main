@@ -91,9 +91,14 @@ select {
   padding: 1rem 4rem;
 }
 
+.logo img {
+  object-fit: cover;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .nav-list {
   list-style: none;
@@ -105,6 +110,10 @@ select {
 .nav-list li:hover {
   color: var(--col-primary-red);
   cursor: pointer;
+}
+
+.hamburger {
+  display: none;
 }
 
 .grid-temp {
@@ -123,7 +132,7 @@ select {
 .grid-title {
   grid-area: title;
   font-size: 3.5rem;
-  line-height: 56px;
+  line-height: 3.5rem;
   color: #00001a;
   font-weight: 800;
 }
@@ -140,7 +149,7 @@ select {
   color: #e9aa52;
   font-weight: 700;
   line-height: 40px;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .panel-content {
@@ -207,4 +216,41 @@ button:hover {
 .f-content {
   color: #5e607a;
   font-weight: 400;
+}
+
+/* mobile design */
+@media (max-width: 45em) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-list {
+    display: none;
+    inset: 4rem 4rem auto;
+    background-color: white;
+    text-align: center;
+    height: 100vh;
+  }
+
+  .opened {
+    display: block;
+    position: fixed;
+  }
+  .grid-temp {
+    grid-template-areas:
+      'logo'
+      'title'
+      'content'
+      'panel';
+  }
+
+  .grid-title {
+    font-size: 2.5rem;
+  }
+  .grid-panel h2 {
+    font-size: 2rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 2fr;
+  }
 }
