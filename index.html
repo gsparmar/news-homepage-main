@@ -45,11 +45,21 @@
     <!-- hero-grid -->
     <main class="container">
       <section class="grid-temp">
-        <img
+        <!-- <img
           class="grid-logo"
           src="./assets/images/image-web-3-desktop.jpg"
           alt="web3"
-        />
+        /> -->
+        <div class="grid-logo">
+          <picture>
+            <source
+              srcset="./assets/images/image-web-3-desktop.jpg"
+              media="(min-width: 800px)"
+            />
+            <img src="./assets/images/image-web-3-mobile.jpg" alt="" />
+          </picture>
+        </div>
+
         <h1 class="grid-title">The Bright Future of Web 3.0?</h1>
         <div class="grid-content">
           <p>

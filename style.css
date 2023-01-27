@@ -127,7 +127,6 @@ select {
 
 .grid-logo {
   grid-area: logo;
-  height: 100%;
 }
 .grid-title {
   grid-area: title;
