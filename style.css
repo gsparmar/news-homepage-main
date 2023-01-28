@@ -229,10 +229,15 @@ button:hover {
   }
   .nav-list {
     display: none;
-    inset: 4rem 4rem auto;
+    position: absolute;
+    padding: 50px 10px;
+    top: -2rem;
+    width: 50%;
+    bottom:-2rem;
+    right: 0;
     background-color: white;
-    text-align: center;
-    height: 100vh;
+    text-align: left;
+    min-height: 100vh;
   }
 
   .opened {
